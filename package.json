@@ -1,0 +1,35 @@
+{
+  "name": "storyblok.vanessa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brauxel/storyblok.vanessa.git"
+  },
+  "author": "Aakash Bhatia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brauxel/storyblok.vanessa/issues"
+  },
+  "homepage": "https://github.com/Brauxel/storyblok.vanessa#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.2.0",
+    "node-sass": "^4.13.1",
+    "prettier": "^2.0.4",
+    "sass-loader": "^8.0.2",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
