@@ -1,10 +1,10 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 module.exports = {
   mode: 'development',
   entry: './src/index.tsx',
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js']
   },
   module: {
     rules: [
@@ -13,15 +13,15 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.js(x?)$/,
-        loader: 'source-map-loader',
-      },
-    ],
+        loader: 'source-map-loader'
+      }
+    ]
   },
   devtool: 'inline-source-map',
   devServer: {
     hot: true,
     https: true,
-    open: true,
+    open: true
   },
   // When importing a module whose path matches one of the following, just
   // assume a corresponding global variable exists and use that instead.
@@ -33,10 +33,10 @@ module.exports = {
   //   },
   plugins: [
     new HtmlWebpackPlugin({
-      //filename: "index.[contenthash].html",
+      // filename: "index.[contenthash].html",
       hash: true,
       template: './src/index.html',
-      title: 'Vanessa :: StoryBlok',
-    }),
-  ],
-};
+      title: 'Vanessa :: StoryBlok'
+    })
+  ]
+}

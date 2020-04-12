@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from 'react'
 
 interface Props {
-  name?: string;
+  name?: string
 }
 
-export const Hello = (props: Props) => <h1>Hello</h1>;
+export const Hello: React.FC<Props> = () => <h1>Hello</h1>
