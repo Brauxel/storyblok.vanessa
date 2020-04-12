@@ -1,23 +1,23 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.tsx",
+  mode: 'development',
+  entry: './src/index.tsx',
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
-      { test: /\.ts(x?)$/, loader: "ts-loader" },
+      { test: /\.ts(x?)$/, loader: 'ts-loader' },
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js(x?)$/,
-        loader: "source-map-loader",
+        loader: 'source-map-loader',
       },
     ],
   },
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   devServer: {
     hot: true,
     https: true,
@@ -27,16 +27,16 @@ module.exports = {
   // assume a corresponding global variable exists and use that instead.
   // This is important because it allows us to avoid bundling all of our
   // dependencies, which allows browsers to cache those libraries between builds.
-  externals: {
-    react: "React",
-    "react-dom": "ReactDOM",
-  },
+  //   externals: {
+  //     react: "React",
+  //     "react-dom": "ReactDOM",
+  //   },
   plugins: [
     new HtmlWebpackPlugin({
       //filename: "index.[contenthash].html",
       hash: true,
-      template: "./src/index.html",
-      title: "Vanessa :: StoryBlok",
+      template: './src/index.html',
+      title: 'Vanessa :: StoryBlok',
     }),
   ],
 };
