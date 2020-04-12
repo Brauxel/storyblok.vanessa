@@ -1,7 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.ts",
+  mode: "development",
+  entry: "./src/index.tsx",
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+  },
   module: {
     rules: [{ test: /\.tsx?$/, loader: "ts-loader" }],
   },
@@ -11,12 +15,11 @@ module.exports = {
     https: true,
     open: true,
   },
-  resolve: {
-    extensions: [".ts", ".tsx", ".js"],
-  },
-  mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
+      //filename: "index.[contenthash].html",
+      hash: true,
+      template: "./src/index.html",
       title: "Vanessa :: StoryBlok",
     }),
   ],

@@ -1,17 +1,10 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "allowJs": true,
-    "target": "ES2017",
+    "outDir": "./dist/",
+    "sourceMap": true,
     "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitThis": true,
-    "strict": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictBindCallApply": true,
-    "sourceMap": true
-  },
-  "include": ["./src/**/*"]
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react"
+  }
 }
