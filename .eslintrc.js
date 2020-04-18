@@ -20,6 +20,10 @@ module.exports = {
       jsx: true
     }
   },
+  rules: {
+    'react/prop-types': 0,
+    '@typescript-eslint/default-param-last': 0
+  },
   env: {
     es6: true,
     browser: true,

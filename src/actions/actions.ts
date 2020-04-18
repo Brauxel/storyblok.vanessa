@@ -7,6 +7,6 @@ interface ActionType {
 export const CHANGE_HEADING = 'CHANGE_HEADING'
 
 /* action creators */
-export const chageHeading = (text: string): ActionType => {
+export const chageHeadingAction = (text: string): ActionType => {
   return { type: CHANGE_HEADING, text }
 }

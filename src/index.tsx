@@ -1,12 +1,15 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { store } from './store'
-import { Hello } from '../src/components/hello'
+import { createStore } from 'redux'
+import { rootReducer } from './reducers/reducers'
+import { App } from './components/App'
 
-ReactDOM.render(
+const store = createStore(rootReducer)
+
+render(
   <Provider store={store}>
-    <Hello />
+    <App />
   </Provider>,
   document.getElementById('root')
 )
