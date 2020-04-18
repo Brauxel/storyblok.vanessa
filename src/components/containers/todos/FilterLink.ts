@@ -3,7 +3,8 @@ import { setVisibilityFiter } from '../../../actions/todos'
 import { Link } from '../../shared/toDoList/Link'
 
 const mapStateToProps = (state: any, ownProps: any): any => ({
-  active: ownProps.filter === state.visibilityFilter
+  active: ownProps.filter === state.visibilityFilter,
+  filter: ownProps.filter
 })
 
 const mapDispatchToProps = (dispatch: any, ownProps: any): any => ({
