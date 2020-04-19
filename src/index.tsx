@@ -1,9 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { createStore } from 'redux'
-import { rootReducer } from './reducers/reducers'
 import { Root } from './root'
+import '@babel/polyfill'
+import { configureStore } from './store'
 
-const store = createStore(rootReducer)
+const store = configureStore()
 
 render(<Root store={store} />, document.getElementById('root'))
