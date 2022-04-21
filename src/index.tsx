@@ -1,5 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import { Hello } from '../src/components/hello'
+import { render } from 'react-dom'
+import { Root } from './root'
+import '@babel/polyfill'
+import { configureStore } from './configureStore'
 
-ReactDOM.render(<Hello />, document.getElementById('root'))
+const store = configureStore()
+
+render(<Root store={store} />, document.getElementById('root'))
